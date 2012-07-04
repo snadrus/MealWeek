@@ -1,0 +1,34 @@
+<html><head>
+<style>
+table#days, #days th, #days td  {border:1px solid; border-spacing:0;}
+.ui-draggable { width: 138px; background-color:#004;border-radius:3px;color:white;padding: 1px 3px;margin:3px}
+.ui-draggable:hover div{ visibility:visible}
+.ui-droppable { width: 140px; height:40px; empty-cells:show}
+.droppableTargetted { background-color: #88C;}
+.x {float:right;font-size:8px;visibility:hidden}//position:absolute;
+</style>
+<link rel=​"stylesheet" href=​"jquery/css/ui-lightness/jquery-ui-1.8.16.custom.css">
+<script type="text/javascript" src="jquery/js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="jquery/js/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="drag.js"></script>
+</head><body bgcolor="#888">
+<div  style="float:left;">
+<table id="days">
+<tr><th>Day</th><th>Breakfast</th><th>Lunch</th><th>Snack</th><th>Dinner</th></tr>
+<tr><td>Monday</td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td></tr>
+<tr><td>Tuesday</td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td></tr>
+<tr><td>Wednesday</td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td></tr>
+<tr><td>Thursday</td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td></tr>
+<tr><td>Friday</td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td></tr>
+<tr><td>Saturday</td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td></tr>
+<tr><td>Sunday</td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td><td class="tddrop"></td></tr>
+</table>
+<button onClick="save()">Save</button>
+<button onClick="load()">Load</button>
+</div>
+<div style="float:left;width:170px">
+<input type=text id="newItem" value="">
+<div id="mealBucket" class="droppable" style="height: 400px"></div>
+</div>
+</body>
+</html>
